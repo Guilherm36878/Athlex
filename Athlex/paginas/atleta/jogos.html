@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos | ATHLEX</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: linear-gradient(180deg, #071116 0%, #091b22 100%);
+      color: #edf6ff;
+    }
+    .page-shell { padding: 28px; }
+    .content-card {
+      background: rgba(12, 23, 29, 0.82);
+      border: 1px solid rgba(103, 255, 160, 0.18);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 50px rgba(0,0,0,0.28);
+    }
+    h1 { margin: 0 0 10px; font-size: 2rem; letter-spacing: -0.04em; }
+    p { margin: 0 0 20px; color: #b8cbd8; line-height: 1.6; }
+    .schedule { display: grid; gap: 16px; }
+    .match {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      background: rgba(17, 34, 40, 0.8);
+      border: 1px solid rgba(131, 167, 255, 0.14);
+      border-radius: 18px;
+      padding: 18px 20px;
+      align-items: center;
+    }
+    .info strong { display:block; margin-bottom:4px; }
+    .info span { color: #a9bac5; }
+    .status {
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      border: 1px solid transparent;
+    }
+    .status.next { background: rgba(110,247,167,0.12); color:#76ff9d; border-color: rgba(110,247,167,0.22); }
+    .status.important { background: rgba(255, 194, 89, 0.1); color:#ffcd6b; border-color: rgba(255,194,89,0.2); }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="content-card">
+      <h1>Jogos</h1>
+      <p>Próximas partidas, localização e status de participação.</p>
+
+      <div class="schedule">
+        <div class="match">
+          <div class="info">
+            <strong>ATHLEX vs. Cruzeiro FC</strong>
+            <span>04/09 · 19h30 · Arena do Vale</span>
+          </div>
+          <div class="status next">Confirmado</div>
+        </div>
+
+        <div class="match">
+          <div class="info">
+            <strong>ATHLEX vs. Santos B</strong>
+            <span>08/09 · 15h00 · CT ATHLEX</span>
+          </div>
+          <div class="status important">Treino oficial</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

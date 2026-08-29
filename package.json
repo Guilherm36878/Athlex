@@ -1,0 +1,12 @@
+{
+  "name": "athlex",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "Athlex"
+  ],
+  "scripts": {
+    "start": "npm --prefix Athlex start",
+    "dev": "npm --prefix Athlex run dev"
+  }
+}

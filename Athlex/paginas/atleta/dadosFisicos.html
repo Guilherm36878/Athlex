@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dados físicos | ATHLEX</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: linear-gradient(180deg, #071116 0%, #091b22 100%);
+      color: #edf6ff;
+    }
+    .page-shell {
+      padding: 28px;
+    }
+    .content-card {
+      background: rgba(12, 23, 29, 0.82);
+      border: 1px solid rgba(103, 255, 160, 0.18);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.28);
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      letter-spacing: -0.04em;
+    }
+    p {
+      margin: 0 0 20px;
+      color: #b8cbd8;
+      line-height: 1.6;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .metric {
+      padding: 18px;
+      border-radius: 16px;
+      background: rgba(17, 34, 40, 0.8);
+      border: 1px solid rgba(131, 167, 255, 0.14);
+    }
+    .metric span { display:block; color:#8ea4b6; font-size:0.8rem; margin-bottom:8px; }
+    .metric strong { font-size:1.3rem; }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="content-card">
+      <h1>Dados físicos</h1>
+      <p>Acompanhe peso, composição corporal, força, resistência e evolução do desempenho do atleta.</p>
+
+      <div class="metrics">
+        <div class="metric"><span>Peso</span><strong>72,4 kg</strong></div>
+        <div class="metric"><span>IMC</span><strong>23,5</strong></div>
+        <div class="metric"><span>Força</span><strong>82%</strong></div>
+        <div class="metric"><span>Resistência</span><strong>88%</strong></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

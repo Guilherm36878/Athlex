@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | ATHLEX</title>
+
+ <link rel="stylesheet" href="../../estilos/base/reset.css">
+  <link rel="stylesheet" href="../../estilos/base/variaveis.css">
+  <link rel="stylesheet" href="../../estilos/base/global.css">
+
+  <link rel="stylesheet" href="../../estilos/componentes/logo.css">
+  <link rel="stylesheet" href="../../estilos/componentes/formularios.css">
+  <link rel="stylesheet" href="../../estilos/componentes/botoes.css">
+
+  <link rel="stylesheet" href="../../estilos/paginas/cadastro.css">
+</head>
+
+<body>
+
+  <div class="cadastro-container">
+
+    <div class="cadastro-card">
+
+      <img
+        src="../../recursos/logos/Logo.png"
+        alt="Logo da Athlex"
+        class="cadastro-logo"
+      >
+
+      <h1>Cadastro de Treinador</h1>
+
+      <p>
+        Configure seu perfil profissional e comece a gerenciar
+        atletas e equipes.
+      </p>
+
+      <form id="cadastro-form" class="cadastro-form" data-role="tecnico">
+
+        <label for="nome">Nome Completo</label>
+        <input
+          id="nome" name="nome" type="text"
+          placeholder="Digite seu nome completo" required
+        >
+
+        <label for="email">Email</label>
+        <input
+          id="email" name="email" type="email"
+          placeholder="Digite seu email" required
+        >
+
+        <label for="senha">Senha</label>
+        <input
+          id="senha" name="senha" type="password"
+          placeholder="Crie uma senha" minlength="8" required
+        >
+
+        <label for="confirmacao">Confirmar Senha</label>
+        <input
+          id="confirmacao" name="confirmacao" type="password"
+          placeholder="Confirme sua senha" minlength="8" required
+        >
+
+        <label for="idade">Idade</label>
+        <input
+          id="idade" name="idade" type="number"
+          placeholder="Digite sua idade"
+        >
+
+        <label for="modalidade">Modalidade Principal</label>
+
+        <select id="modalidade" name="modalidade" required>
+          <option>Selecione</option>
+          <option>Handebol</option>
+          <option>Futebol</option>
+          <option>Futsal</option>
+          <option>Basquete</option>
+          <option>Voleibol</option>
+          <option>Corrida</option>
+          <option>Ciclismo</option>
+          <option>Crossfit</option>
+          <option>Outra</option>
+        </select>
+
+        <label for="cargo">Cargo</label>
+
+        <select id="cargo" name="cargo" required>
+          <option>Selecione</option>
+          <option>Técnico</option>
+          <option>Preparador Físico</option>
+          <option>Auxiliar Técnico</option>
+          <option>Analista de Desempenho</option>
+          <option>Gestor Esportivo</option>
+          <option>Outro</option>
+        </select>
+
+        <div class="cadastro-actions">
+
+          <p id="cadastro-feedback" class="cadastro-feedback" role="alert"></p>
+          <button type="submit" class="cadastro-btn primary">
+            Criar Conta
+          </button>
+
+          <a
+            href="../autentificacao/login.html"
+            class="cadastro-btn secondary"
+          >
+            Voltar
+          </a>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</body>
+<script src="/scripts/autenticacao/cadastro.js" defer></script>
+</html>

@@ -1,0 +1,22 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #6dff4b;
+  border: 1px solid rgba(89, 255, 80, 0.45);
+  border-radius: 999px;
+  padding: 10px 20px;
+  margin-bottom: 38px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: rgba(35, 255, 90, 0.06);
+}
+
+.tag span {
+  width: 8px;
+  height: 8px;
+  background: #33ff42;
+  border-radius: 50%;
+  box-shadow: 0 0 16px #33ff42;
+}

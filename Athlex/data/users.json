@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ae978739-f4d6-4e08-8514-fb388ebb3461",
+    "nome": "Ingrid Nunes Freitas",
+    "email": "in458699@gmail.com",
+    "passwordHash": "$2b$12$fbc9kFivILuUCTjYdOm0hedtAR7Vb.yZHuZKoTt.kB1k9qaY8cGH6",
+    "roles": [
+      "atleta"
+    ],
+    "links": [],
+    "permissions": []
+  },
+  {
+    "id": "46ec1056-f676-4fd7-8760-91617ef7ae07",
+    "nome": "Ingrid Nunes Freitas",
+    "email": "ingridnunesfreitas@gmail.com",
+    "passwordHash": "$2b$12$UUylUXCclolXOvcaR2WbS.8mo8LB9AFHxlITIbDph.aLdWBkHRaTW",
+    "roles": [
+      "gestor"
+    ],
+    "profile": {
+      "organizacao": "Flamengo FC",
+      "tipoOrganizacao": "Clube",
+      "modalidade": "Futebol"
+    },
+    "links": [],
+    "permissions": []
+  }
+]

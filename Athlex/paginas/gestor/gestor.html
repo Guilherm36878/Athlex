@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor | ATHLEX</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../recursos/icones/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../recursos/icones/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../recursos/icones/favicon-16x16.png">
+
+  <link rel="stylesheet" href="../../estilos/base/reset.css">
+  <link rel="stylesheet" href="../../estilos/base/variaveis.css">
+  <link rel="stylesheet" href="../../estilos/base/global.css">
+  <link rel="stylesheet" href="../../estilos/paginas/dashboard-base.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="../../index.html" class="sidebar-logo">
+          <img src="../../recursos/logos/Logo.png" alt="Logo ATHLEX" class="sidebar-logo-image">
+          <span>ATHLEX</span>
+        </a>
+      </div>
+
+      <div class="sidebar-profile">
+        <div class="profile-avatar" id="user-avatar">G</div>
+        <div class="profile-info">
+          <strong id="user-name">Carregando...</strong>
+          <span id="user-role-label">Gestor</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-navigation">
+        <a href="#" class="sidebar-link active" data-page="equipes.html">
+          <span class="sidebar-icon">⌂</span>
+          <span>Início</span>
+        </a>
+        <a href="#" class="sidebar-link" data-page="equipes.html">
+          <span class="sidebar-icon">◉</span>
+          <span>Equipes</span>
+        </a>
+        <a href="#" class="sidebar-link" data-page="usuarios.html">
+          <span class="sidebar-icon">☰</span>
+          <span>Usuários</span>
+        </a>
+        <a href="#" class="sidebar-link" data-page="relatorios.html">
+          <span class="sidebar-icon">↗</span>
+          <span>Relatórios</span>
+        </a>
+        <a href="#" class="sidebar-link" data-page="desempenho.html">
+          <span class="sidebar-icon">★</span>
+          <span>Desempenho</span>
+        </a>
+        <a href="#" class="sidebar-link" data-page="configuracoes.html">
+          <span class="sidebar-icon">⚙</span>
+          <span>Configurações</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="../../login.html" class="sidebar-link logout-link">
+          <span class="sidebar-icon">↪</span>
+          <span>Sair</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="dashboard-content">
+      <header class="dashboard-header">
+        <div>
+          <span class="header-eyebrow">Área do gestor</span>
+          <h1 id="welcome-message">Olá, gestor!</h1>
+        </div>
+      </header>
+
+      <div class="dashboard-iframe-wrap">
+        <iframe id="content-frame" title="Conteúdo do gestor" src="equipes.html"></iframe>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function initialsFromName(name) {
+      return (name || 'G')
+        .trim()
+        .split(/\s+/)
+        .slice(0, 2)
+        .map((part) => part[0]?.toUpperCase() || '')
+        .join('') || 'G';
+    }
+
+    function renderUserProfile(user) {
+      const name = user?.nome || 'Gestor';
+      const avatar = document.getElementById('user-avatar');
+      const nameElement = document.getElementById('user-name');
+      const roleLabel = document.getElementById('user-role-label');
+      const welcomeMessage = document.getElementById('welcome-message');
+
+      if (avatar) avatar.textContent = initialsFromName(name);
+      if (nameElement) nameElement.textContent = name;
+      if (roleLabel) roleLabel.textContent = 'Gestor';
+      if (welcomeMessage) welcomeMessage.textContent = `Olá, ${name}!`;
+    }
+
+    function setActivePage(page) {
+      document.querySelectorAll('.sidebar-link[data-page]').forEach((link) => {
+        link.classList.toggle('active', link.dataset.page === page);
+      });
+    }
+
+    function attachNavigation() {
+      document.querySelectorAll('.sidebar-link[data-page]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const page = link.dataset.page;
+          const frame = document.getElementById('content-frame');
+          if (frame) frame.src = page;
+          setActivePage(page);
+        });
+      });
+    }
+
+    async function validateGestorAccess() {
+      try {
+        const response = await fetch('/api/auth/me', { credentials: 'same-origin' });
+        if (!response.ok) {
+          window.location.href = '/login.html';
+          return;
+        }
+
+        const data = await response.json();
+        const user = data?.user;
+        const roles = Array.isArray(user?.roles) ? user.roles : [];
+
+        if (!roles.includes('gestor')) {
+          window.location.href = '/login.html';
+          return;
+        }
+
+        renderUserProfile(user);
+      } catch (error) {
+        window.location.href = '/login.html';
+      }
+    }
+
+    attachNavigation();
+    validateGestorAccess();
+  </script>
+</body>
+</html>

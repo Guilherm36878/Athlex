@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início | ATHLEX</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: linear-gradient(180deg, #071116 0%, #091b22 100%);
+      color: #edf6ff;
+    }
+    .page-shell { padding: 28px; }
+    
+    .alerts-section {
+      margin-bottom: 28px;
+    }
+    
+    .alert {
+      display: flex;
+      gap: 16px;
+      background: rgba(255, 194, 89, 0.08);
+      border: 1px solid rgba(255, 194, 89, 0.22);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 12px;
+      align-items: flex-start;
+    }
+    
+    .alert.warning {
+      background: rgba(255, 109, 109, 0.08);
+      border-color: rgba(255, 109, 109, 0.22);
+    }
+    
+    .alert.success {
+      background: rgba(110, 247, 167, 0.08);
+      border-color: rgba(110, 247, 167, 0.22);
+    }
+    
+    .alert-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .alert-content strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #ffcd6b;
+    }
+    
+    .alert.warning .alert-content strong { color: #ff7b7b; }
+    .alert.success .alert-content strong { color: #76ff9d; }
+    
+    .alert-content p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #d7e7f1;
+    }
+    
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 32px 0 16px;
+      color: #edf6ff;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.7;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    
+    .card {
+      background: rgba(17, 34, 40, 0.8);
+      border: 1px solid rgba(131, 167, 255, 0.14);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    
+    .card-label {
+      font-size: 0.75rem;
+      color: #9babbb;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      display: block;
+    }
+    
+    .card-value {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #6ef7a7;
+    }
+    
+    .card-subtitle {
+      font-size: 0.85rem;
+      color: #8da7b0;
+      margin-top: 4px;
+    }
+    
+    .next-event {
+      background: rgba(12, 23, 29, 0.82);
+      border: 1px solid rgba(103, 255, 160, 0.18);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+    
+    .next-event h3 {
+      margin: 0 0 16px;
+      font-size: 1rem;
+      color: #b8cbd8;
+    }
+    
+    .event-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(103, 255, 160, 0.08);
+    }
+    
+    .event-item:last-child {
+      border-bottom: none;
+    }
+    
+    .event-title {
+      font-weight: 600;
+    }
+    
+    .event-time {
+      color: #8da7b0;
+      font-size: 0.85rem;
+    }
+    
+    .status-badge {
+      display: inline-block;
+      background: rgba(110, 247, 167, 0.12);
+      color: #76ff9d;
+      border: 1px solid rgba(110, 247, 167, 0.22);
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 0.7rem;
+      font-weight: 800;
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <!-- Alertas e notificações importantes -->
+    <section class="alerts-section">
+      <div class="alert success">
+        <div class="alert-icon">✓</div>
+        <div class="alert-content">
+          <strong>Bem-vindo de volta!</strong>
+          <p>Seu último registro foi há 2 dias. Continue monitorando seu bem-estar.</p>
+        </div>
+      </div>
+      
+      <div class="alert">
+        <div class="alert-icon">ℹ</div>
+        <div class="alert-content">
+          <strong>Próximo treino em 3 horas</strong>
+          <p>Força inferior às 18:30 na Arena do Vale. Prepare-se!</p>
+        </div>
+      </div>
+      
+      <div class="alert warning">
+        <div class="alert-icon">⚠</div>
+        <div class="alert-content">
+          <strong>Recuperação incompleta</strong>
+          <p>Sua recuperação está em 78%. Aumente o repouso nos próximos dias.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Métricas rápidas -->
+    <h2 class="section-title">Resumo de Hoje</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="card-label">Fadiga</span>
+        <div class="card-value">5/10</div>
+        <div class="card-subtitle">Moderada</div>
+      </div>
+      <div class="card">
+        <span class="card-label">Humor</span>
+        <div class="card-value">8/10</div>
+        <div class="card-subtitle">Positivo</div>
+      </div>
+      <div class="card">
+        <span class="card-label">Sono</span>
+        <div class="card-value">7h 30min</div>
+        <div class="card-subtitle">Adequado</div>
+      </div>
+      <div class="card">
+        <span class="card-label">Energia</span>
+        <div class="card-value">85%</div>
+        <div class="card-subtitle">Excelente</div>
+      </div>
+    </div>
+
+    <!-- Próximos eventos -->
+    <h2 class="section-title">Próximos Eventos</h2>
+    <div class="next-event">
+      <h3>Calendário</h3>
+      
+      <div class="event-item">
+        <div>
+          <div class="event-title">Treino de Força</div>
+          <div class="event-time">Hoje às 18:30</div>
+        </div>
+        <span class="status-badge">Confirmado</span>
+      </div>
+      
+      <div class="event-item">
+        <div>
+          <div class="event-title">ATHLEX vs. Cruzeiro FC</div>
+          <div class="event-time">04 de setembro às 19:30</div>
+        </div>
+        <span class="status-badge">Próximo</span>
+      </div>
+      
+      <div class="event-item">
+        <div>
+          <div class="event-title">Consulta com Fisioterapeuta</div>
+          <div class="event-time">06 de setembro às 14:00</div>
+        </div>
+        <span class="status-badge">Agendado</span>
+      </div>
+    </div>
+
+    <!-- Performance resumida -->
+    <h2 class="section-title">Seu Desempenho</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="card-label">Força</span>
+        <div class="card-value">+12%</div>
+        <div class="card-subtitle">Mês anterior</div>
+      </div>
+      <div class="card">
+        <span class="card-label">Resistência</span>
+        <div class="card-value">+9%</div>
+        <div class="card-subtitle">Mês anterior</div>
+      </div>
+      <div class="card">
+        <span class="card-label">Velocidade</span>
+        <div class="card-value">+7%</div>
+        <div class="card-subtitle">Mês anterior</div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

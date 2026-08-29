@@ -1,0 +1,28 @@
+.logo-image {
+  height: 52px;
+  width: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 120, 0.35));
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 14px;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 8px;
+}
+
+.cadastro-logo {
+  width: 115px;
+  display: block;
+  margin: 0 auto 22px;
+}
+
+.login-logo {
+  width: 120px;
+  display: block;
+  margin: 0 auto 24px;
+}

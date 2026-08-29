@@ -1,0 +1,409 @@
+# Mapa de Navegação ATHLEX
+
+ATHLEX
+
+Público
+│
+├── Página Inicial
+├── Explorar
+└── Login
+
+───────────────
+
+Autenticado
+│
+├── Atleta
+│   ├── Dashboard
+│   ├── Treinos
+│   ├── Jogos
+│   ├── Monitoramento
+│   ├── Perfil
+│   └── Configurações
+│
+├── Técnico
+│   ├── Dashboard
+│   ├── Equipe
+│   ├── Planejamento
+│   ├── Jogos
+│   ├── Análises
+│   └── Configurações
+│
+└── Gestor
+    ├── Dashboard
+    ├── Organização
+    ├── Equipes
+    ├── Usuários
+    ├── Indicadores
+    └── Configurações
+
+# Princípios de Navegação ATHLEX
+
+Toda funcionalidade deve obedecer aos seguintes princípios:
+
+1. O usuário nunca deve precisar de mais de 3 cliques para chegar a uma função principal.
+
+2. O menu principal deve possuir no máximo 6 opções.
+
+3. Cada tela deve possuir apenas um objetivo principal.
+
+4. O usuário deve sempre saber em qual módulo está.
+
+5. O botão "Início" deve estar disponível em todas as áreas.
+
+6. Configurações e Logout permanecem sempre no menu do perfil.
+
+7. Um perfil nunca visualizará funcionalidades que não pode utilizar.
+
+8. O Dashboard sempre será o ponto central da navegação.
+
+
+
+MAIS ESPECIFICO: 
+
+
+INÍCIO
+│
+├── Explorar a ATHLEX
+│   ├── Conhecer a plataforma
+│   ├── Ver recursos
+│   ├── Ver soluções por perfil
+│   └── Ir para o login
+│
+└── Entrar
+    │
+    ├── Já tenho conta
+    │   └── Login
+    │       └── Área correspondente ao perfil
+    │
+    └── Criar novo acesso
+        ├── Cadastro de atleta
+        ├── Cadastro de treinador
+        └── Cadastro de gestor
+```
+
+Até aqui, sua ideia está correta e é intuitiva.
+
+## Depois do login
+
+Depois de entrar, o usuário não deve cair diretamente em uma página muito específica.
+
+Ele deve chegar a um **painel principal**, que funciona como hub.
+
+```text
+LOGIN
+  ↓
+PAINEL PRINCIPAL
+  ├── Resumo do dia
+  ├── Atalhos principais
+  ├── Alertas
+  ├── Próximos compromissos
+  └── Menu de navegação
+```
+
+Esse painel muda de acordo com o perfil.
+
+---
+
+# Mapa de navegação do atleta
+
+O ambiente do atleta precisa ser o mais simples dos três, porque será usado diariamente e muitas vezes pelo celular.
+
+```text
+ÁREA DO ATLETA
+│
+├── Início
+│   ├── Treino de hoje
+│   ├── Questionário de bem-estar
+│   ├── Próximo jogo
+│   └── Avisos
+│
+├── Treinos
+│   ├── Agenda
+│   ├── Treino de hoje
+│   ├── Histórico
+│   └── Materiais enviados
+│
+├── Monitoramento
+│   ├── Bem-estar
+│   ├── PSE/RPE
+│   ├── Dor e desconforto
+│   └── Disponibilidade
+│
+├── Desempenho
+│   ├── Carga semanal
+│   ├── Frequência
+│   ├── Estatísticas
+│   └── Evolução
+│
+├── Jogos
+│   ├── Calendário
+│   ├── Convocações
+│   ├── Resultados
+│   └── Estatísticas individuais
+│
+├── Perfil
+│   ├── Dados pessoais
+│   ├── Dados esportivos
+│   ├── Contato de emergência
+│   └── Editar perfil
+│
+└── Configurações
+    ├── Notificações
+    ├── Privacidade
+    ├── Trocar função
+    └── Sair
+```
+
+O atleta pode acessar e preencher dados de bem-estar, PSE/RPE, disponibilidade e informações pessoais, mas não deve editar estatísticas oficiais, planejamento ou registros validados. 
+
+## Menu visível do atleta
+
+Eu não mostraria dez opções ao mesmo tempo. No celular, usaria apenas cinco itens:
+
+```text
+Início | Treinos | Monitorar | Jogos | Perfil
+```
+
+Dentro de cada área aparecem as opções secundárias.
+
+---
+
+# Mapa de navegação do técnico
+
+O técnico possui mais funções, mas elas podem ser agrupadas em cinco grandes áreas.
+
+```text
+ÁREA DO TÉCNICO
+│
+├── Início
+│   ├── Resumo da equipe
+│   ├── Atletas disponíveis
+│   ├── Alertas
+│   ├── Próximo treino
+│   └── Próximo jogo
+│
+├── Equipe
+│   ├── Lista de atletas
+│   ├── Perfil dos atletas
+│   ├── Presença
+│   ├── Disponibilidade
+│   └── Avaliações
+│
+├── Planejamento
+│   ├── Planejamento anual
+│   ├── Macrociclo
+│   ├── Mesociclo
+│   ├── Microciclo
+│   ├── Sessões
+│   └── Modelos de treino
+│
+├── Jogos
+│   ├── Calendário
+│   ├── Cadastro de partida
+│   ├── Convocação
+│   ├── Escalação
+│   ├── Scout
+│   └── Relatório pós-jogo
+│
+├── Análises
+│   ├── Monitoramento
+│   ├── Cargas
+│   ├── Estatísticas
+│   ├── Vídeos
+│   └── Relatórios
+│
+├── Comunicação
+│   ├── Avisos
+│   ├── Formulários
+│   └── Conteúdos compartilhados
+│
+└── Configurações
+    ├── Perfil
+    ├── Equipes vinculadas
+    ├── Trocar função
+    └── Sair
+```
+
+O técnico é responsável por planejamento, presença, convocações, avaliações e estatísticas, mas só deve acessar atletas e equipes às quais esteja vinculado.  
+
+## Menu visível do técnico
+
+No computador:
+
+```text
+Início
+Equipe
+Planejamento
+Jogos
+Análises
+Configurações
+```
+
+O restante aparece dentro dessas seções.
+
+---
+
+# Mapa de navegação do gestor
+
+O gestor precisa enxergar a organização, não todos os detalhes individuais dos atletas.
+
+```text
+ÁREA DO GESTOR
+│
+├── Início
+│   ├── Equipes ativas
+│   ├── Usuários ativos
+│   ├── Frequência geral
+│   ├── Alertas
+│   └── Indicadores institucionais
+│
+├── Organização
+│   ├── Dados institucionais
+│   ├── Clubes e núcleos
+│   ├── Locais
+│   ├── Quadras
+│   └── Temporadas
+│
+├── Equipes
+│   ├── Lista de equipes
+│   ├── Categorias
+│   ├── Comissões técnicas
+│   ├── Calendários
+│   └── Competições
+│
+├── Usuários
+│   ├── Atletas
+│   ├── Técnicos
+│   ├── Gestores
+│   ├── Convites
+│   ├── Vínculos
+│   └── Permissões
+│
+├── Indicadores
+│   ├── Frequência
+│   ├── Disponibilidade
+│   ├── Resultados
+│   ├── Comparação entre equipes
+│   └── Relatórios
+│
+├── Administração
+│   ├── Documentos
+│   ├── Materiais
+│   ├── Equipamentos
+│   └── Histórico de alterações
+│
+├── Financeiro
+│   └── Módulo opcional
+│
+└── Configurações
+    ├── Identidade visual
+    ├── Permissões gerais
+    ├── Trocar função
+    └── Sair
+```
+
+O gestor administra equipes, usuários, vínculos e permissões, mas deve visualizar dados sensíveis apenas de forma consolidada quando não houver autorização específica. 
+
+---
+
+# Como evitar que o usuário se perca
+
+## 1. Sempre ter um botão “Início”
+
+O usuário deve conseguir voltar ao painel principal em qualquer tela.
+
+## 2. Mostrar onde ele está
+
+Exemplo:
+
+```text
+Planejamento > Microciclo > Semana 03
+```
+
+Isso é chamado de breadcrumb.
+
+## 3. Não mostrar funcionalidades que o perfil não usa
+
+O atleta não precisa enxergar:
+
+* gestão de usuários;
+* planejamento anual;
+* relatórios institucionais.
+
+O gestor não precisa ter acesso direto ao formulário de PSE de um atleta.
+
+## 4. Usar atalhos no dashboard
+
+O painel inicial deve mostrar apenas as ações mais comuns.
+
+Exemplo do atleta:
+
+```text
+Responder bem-estar
+Ver treino
+Confirmar presença
+Ver próximo jogo
+```
+
+## 5. Agrupar configurações e logout
+
+Não coloque “Sair” perdido no menu principal.
+
+O ideal:
+
+```text
+Foto do usuário
+Nome
+Perfil atual
+────────────
+Meu perfil
+Configurações
+Trocar função
+Sair
+```
+
+## 6. Suportar perfis acumuláveis
+
+Um usuário pode ser gestor e técnico. Nesse caso, ele não deve misturar as funções na mesma tela. Deve existir uma opção:
+
+```text
+Você está usando:
+[ Técnico ▼ ]
+
+Alternar para:
+Gestor
+```
+
+Isso está alinhado à regra de perfis acumuláveis definida no documento. 
+
+---
+
+# Mapa de navegação para a Sprint 1
+
+Para a Sprint 1, não precisamos desenhar todas as páginas internas. Basta definir o esqueleto:
+
+```text
+index.html
+│
+├── explorar.html
+│
+└── paginas/autenticacao/login.html
+    │
+    ├── paginas/cadastros/cadastro-atleta.html
+    ├── paginas/cadastros/cadastro-treinador.html
+    └── paginas/cadastros/cadastro-dirigente.html
+         │
+         └── paginas/boas-vindas/
+             ├── boas-vindas-atleta.html
+             ├── boas-vindas-treinador.html
+             └── boas-vindas-gestor.html
+                  │
+                  └── paginas/modelos/dashboard-base.html
+```
+
+Depois, o `dashboard-base` será transformado em:
+
+```text
+paginas/atleta/dashboard-atleta.html
+paginas/treinador/dashboard-treinador.html
+paginas/gestor/dashboard-gestor.html

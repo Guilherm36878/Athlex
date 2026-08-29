@@ -1,0 +1,63 @@
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cadastro-form label {
+  color: #d8f5e2;
+  font-size: 14px;
+}
+
+.cadastro-form input,
+.cadastro-form select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 120, 0.25);
+  background: #08120c;
+  color: #fff;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.cadastro-form input:focus,
+.cadastro-form select:focus {
+  border-color: #00ff78;
+  box-shadow: 0 0 12px rgba(0, 255, 120, 0.25);
+}
+
+.cadastro-form select option {
+  background: #08120c;
+  color: #fff;
+}
+
+.cadastro-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.login-card label {
+  display: block;
+  margin-bottom: 8px;
+  color: #d8f5e2;
+  font-size: 14px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 120, 0.25);
+  background: #08120c;
+  color: #fff;
+  outline: none;
+}
+
+.login-card input:focus {
+  border-color: #00ff78;
+  box-shadow: 0 0 12px rgba(0, 255, 120, 0.25);
+}

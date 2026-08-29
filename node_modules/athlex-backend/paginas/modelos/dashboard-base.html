@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ATHLEX</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="recursos/icones/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="recursos/icones/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="recursos/icones/favicon-16x16.png">
+
+  <!-- Estilos básicos -->
+  <link rel="stylesheet" href="../../estilos/base/reset.css">
+  <link rel="stylesheet" href="../../estilos/base/variaveis.css">
+  <link rel="stylesheet" href="../../estilos/base/global.css">
+
+  <!-- Componentes -->
+  <link rel="stylesheet" href="../../estilos/componentes/logo.css">
+  <link rel="stylesheet" href="../../estilos/componentes/botoes.css">
+  <link rel="stylesheet" href="../../estilos/componentes/sidebar.css">
+  <link rel="stylesheet" href="../../estilos/componentes/cabecalho.css">
+  <link rel="stylesheet" href="../../estilos/componentes/cards.css">
+  <link rel="stylesheet" href="../../estilos/componentes/badges.css">
+
+  <!-- Estilo específico da página -->
+  <link rel="stylesheet" href="../../estilos/paginas/dashboard-base.css">
+</head>
+
+<body>
+
+  <div class="dashboard-layout">
+
+    <!-- Menu lateral -->
+    <aside class="sidebar">
+
+      <div class="sidebar-header">
+
+        <a href="../../index.html" class="sidebar-logo">
+          <img
+            src="../../recursos/logos/Logo.png"
+            alt="Logo da Athlex"
+            class="sidebar-logo-image"
+          >
+
+          <span>ATHLEX</span>
+        </a>
+<button
+  type="button"
+  class="sidebar-toggle"
+  aria-label="Recolher menu lateral"
+  aria-expanded="true"
+>
+  ←
+</button>
+
+      </div>
+
+      <!-- Perfil do usuário -->
+      <div class="sidebar-profile">
+
+        <div class="profile-avatar">
+          JG
+        </div>
+
+        <div class="profile-info">
+          <strong>João Guilherme</strong>
+          <span>Atleta de Futsal</span>
+        </div>
+
+      </div>
+
+      <!-- Perfil ativo -->
+      <div class="active-profile">
+
+        <span>Perfil ativo</span>
+
+        <button type="button" class="profile-selector">
+          Atleta
+          <span>⌄</span>
+        </button>
+
+      </div>
+
+      <!-- Navegação principal -->
+      <nav class="sidebar-navigation">
+
+        <a href="#" class="sidebar-link active" data-tooltip="Início">
+          <span class="sidebar-icon">⌂</span>
+          <span>Início</span>
+        </a>
+
+        <a href="#" class="sidebar-link" data-tooltip="Treinos">
+          <span class="sidebar-icon">◫</span>
+          <span>Treinos</span>
+        </a>
+
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">♡</span>
+          <span>Monitoramento</span>
+        </a>
+
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">◉</span>
+          <span>Jogos</span>
+        </a>
+
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">↗</span>
+          <span>Desempenho</span>
+        </a>
+
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">♙</span>
+          <span>Meu perfil</span>
+        </a>
+
+      </nav>
+
+      <!-- Rodapé do menu -->
+      <div class="sidebar-footer">
+
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">⚙</span>
+          <span>Configurações</span>
+        </a>
+
+        <a
+          href="../autenticacao/login.html"
+          class="sidebar-link logout-link"
+        >
+          <span class="sidebar-icon">↪</span>
+          <span>Sair</span>
+        </a>
+
+      </div>
+
+    </aside>
+
+    <!-- Conteúdo ao lado do menu -->
+    <div class="dashboard-content">
+
+      <!-- Cabeçalho superior -->
+      <header class="dashboard-header">
+
+        <div class="header-left">
+
+          <button
+            type="button"
+            class="menu-mobile-button"
+            aria-label="Abrir menu"
+          >
+            ☰
+          </button>
+
+          <div>
+            <span class="header-eyebrow">Área do atleta</span>
+            <h1>Olá, João Guilherme!</h1>
+          </div>
+
+        </div>
+
+        <div class="header-actions">
+
+          <button
+            type="button"
+            class="header-action-button"
+            aria-label="Pesquisar"
+          >
+           ⌕
+          </button>
+
+          <button
+            type="button"
+            class="header-action-button notification-button"
+            aria-label="Notificações"
+          >
+            ♢
+            <span class="notification-indicator"></span>
+          </button>
+
+          <button type="button" class="header-profile-button">
+
+            <span class="header-avatar">
+              JG
+            </span>
+
+            <span class="header-profile-text">
+              <strong>João Guilherme</strong>
+              <small>Atleta</small>
+            </span>
+
+            <span>⌄</span>
+
+          </button>
+
+        </div>
+
+      </header>
+
+      <!-- Conteúdo principal -->
+      <main class="dashboard-main">
+
+        <!-- Apresentação -->
+        <section class="dashboard-welcome">
+
+          <div class="welcome-content">
+
+            <span class="status-badge">
+              Temporada 2026
+            </span>
+
+            <h2>Seu desempenho começa aqui.</h2>
+
+            <p>
+              Acompanhe seus treinos, registre seu bem-estar e consulte
+              as próximas atividades da equipe.
+            </p>
+
+          </div>
+
+          <div class="welcome-player">
+
+            <span>Modalidade</span>
+            <strong>Futsal</strong>
+
+            <span>Posição</span>
+            <strong>Ala</strong>
+
+            <span>Equipe</span>
+            <strong>Athlex Futsal</strong>
+
+          </div>
+
+        </section>
+
+        <!-- Atalhos principais -->
+        <section class="dashboard-section">
+
+          <div class="section-heading">
+
+            <div>
+              <span class="section-eyebrow">Acesso rápido</span>
+              <h2>O que você precisa fazer hoje?</h2>
+            </div>
+
+          </div>
+
+          <div class="quick-actions-grid">
+
+            <a href="#" class="quick-action-card">
+
+              <span class="quick-action-icon">♡</span>
+
+              <div>
+                <strong>Responder bem-estar</strong>
+                <p>Informe como você está se sentindo hoje.</p>
+              </div>
+
+              <span class="quick-action-arrow">→</span>
+
+            </a>
+
+            <a href="#" class="quick-action-card">
+
+              <span class="quick-action-icon">◫</span>
+
+              <div>
+                <strong>Ver treino de hoje</strong>
+                <p>Consulte horário, local e objetivos da sessão.</p>
+              </div>
+
+              <span class="quick-action-arrow">→</span>
+
+            </a>
+
+            <a href="#" class="quick-action-card">
+
+              <span class="quick-action-icon">✓</span>
+
+              <div>
+                <strong>Confirmar presença</strong>
+                <p>Informe sua disponibilidade para o próximo treino.</p>
+              </div>
+
+              <span class="quick-action-arrow">→</span>
+
+            </a>
+
+          </div>
+
+        </section>
+
+        <!-- Indicadores -->
+        <section class="dashboard-section">
+
+          <div class="section-heading">
+
+            <div>
+              <span class="section-eyebrow">Resumo</span>
+              <h2>Visão geral</h2>
+            </div>
+
+          </div>
+
+          <div class="metrics-grid">
+
+            <article class="metric-card">
+
+              <span class="metric-label">
+                Treinos na semana
+              </span>
+
+              <strong class="metric-value">
+                4
+              </strong>
+
+              <small class="metric-description">
+                3 realizados e 1 próximo
+              </small>
+
+            </article>
+
+            <article class="metric-card">
+
+              <span class="metric-label">
+                Frequência
+              </span>
+
+              <strong class="metric-value">
+                92%
+              </strong>
+
+              <small class="metric-description">
+                Últimos 30 dias
+              </small>
+
+            </article>
+
+            <article class="metric-card">
+
+              <span class="metric-label">
+                Disponibilidade
+              </span>
+
+              <strong class="metric-value">
+                Liberado
+              </strong>
+
+              <small class="metric-description">
+                Sem restrições registradas
+              </small>
+
+            </article>
+
+            <article class="metric-card">
+
+              <span class="metric-label">
+                Próximo jogo
+              </span>
+
+              <strong class="metric-value">
+                06 AGO
+              </strong>
+
+              <small class="metric-description">
+                Athlex x Jaguar Futsal
+              </small>
+
+            </article>
+
+          </div>
+
+        </section>
+
+        <!-- Área de duas colunas -->
+        <section class="dashboard-grid">
+
+          <!-- Próximo treino -->
+          <article class="dashboard-card">
+
+            <div class="card-header">
+
+              <div>
+                <span class="section-eyebrow">Agenda</span>
+                <h2>Próximo treino</h2>
+              </div>
+
+              <a href="#">Ver agenda</a>
+
+            </div>
+
+            <div class="training-summary">
+
+              <div class="training-date">
+                <span>SEG</span>
+                <strong>03</strong>
+                <small>AGO</small>
+              </div>
+
+              <div class="training-info">
+
+                <span class="status-badge">
+                  Treino técnico
+                </span>
+
+                <h3>Organização ofensiva e finalização</h3>
+
+                <p>18h30 • Ginásio da Athlex</p>
+
+              </div>
+
+            </div>
+
+            <div class="training-details">
+
+              <div>
+                <span>Duração prevista</span>
+                <strong>90 minutos</strong>
+              </div>
+
+              <div>
+                <span>Intensidade</span>
+                <strong>Moderada</strong>
+              </div>
+
+            </div>
+
+            <a href="#" class="card-primary-action">
+              Ver detalhes do treino
+            </a>
+
+          </article>
+
+          <!-- Bem-estar -->
+          <article class="dashboard-card">
+
+            <div class="card-header">
+
+              <div>
+                <span class="section-eyebrow">Monitoramento</span>
+                <h2>Bem-estar diário</h2>
+              </div>
+
+              <span class="pending-badge">
+                Pendente
+              </span>
+
+            </div>
+
+            <div class="wellness-content">
+
+              <div class="wellness-score">
+                <strong>—</strong>
+                <span>Sem resposta hoje</span>
+              </div>
+
+              <p>
+                Responda ao questionário diário para ajudar sua equipe
+                a acompanhar sua recuperação e disponibilidade.
+              </p>
+
+            </div>
+
+            <a href="#" class="card-primary-action">
+              Responder agora
+            </a>
+
+          </article>
+
+        </section>
+
+        <!-- Avisos -->
+        <section class="dashboard-section">
+
+          <div class="section-heading">
+
+            <div>
+              <span class="section-eyebrow">Comunicação</span>
+              <h2>Avisos recentes</h2>
+            </div>
+
+            <a href="#">Ver todos</a>
+
+          </div>
+
+          <div class="announcements-list">
+
+            <article class="announcement-item">
+
+              <div class="announcement-icon">
+                !
+              </div>
+
+              <div class="announcement-content">
+
+                <div class="announcement-heading">
+                  <strong>Alteração no horário do treino</strong>
+                  <span>Hoje, 10h25</span>
+                </div>
+
+                <p>
+                  O treino de quarta-feira começará às 19h no Ginásio
+                  Municipal.
+                </p>
+
+              </div>
+
+            </article>
+
+            <article class="announcement-item">
+
+              <div class="announcement-icon">
+                ✓
+              </div>
+
+              <div class="announcement-content">
+
+                <div class="announcement-heading">
+                  <strong>Convocação disponível</strong>
+                  <span>Ontem, 18h10</span>
+                </div>
+
+                <p>
+                  A convocação para a próxima partida já pode ser consultada.
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesões | ATHLEX</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: linear-gradient(180deg, #071116 0%, #091b22 100%);
+      color: #edf6ff;
+    }
+    .page-shell { padding: 28px; }
+    .content-card {
+      background: rgba(12, 23, 29, 0.82);
+      border: 1px solid rgba(103, 255, 160, 0.18);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 22px 50px rgba(0,0,0,0.28);
+    }
+    h1 { margin: 0 0 10px; font-size: 2rem; letter-spacing: -0.04em; }
+    p { margin: 0 0 20px; color: #b8cbd8; line-height: 1.6; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+    .card {
+      background: rgba(17, 34, 40, 0.8);
+      border: 1px solid rgba(131, 167, 255, 0.14);
+      border-radius: 18px;
+      padding: 18px;
+    }
+    .status {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: rgba(255, 194, 89, 0.1);
+      color: #ffcd6b;
+      border: 1px solid rgba(255,194,89,0.2);
+      font-size: 0.75rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .card h3 { margin: 0 0 10px; }
+    .card p { margin: 0; color: #dceafd; }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="content-card">
+      <h1>Lesões</h1>
+      <p>Acompanhamento da condição física e recuperação do atleta.</p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="status">Em observação</div>
+          <h3>Torção no tornozelo</h3>
+          <p>Recuperação gradual com exercícios de mobilidade e fortalecimento.</p>
+        </div>
+
+        <div class="card">
+          <div class="status">Recuperada</div>
+          <h3>Desgaste muscular</h3>
+          <p>Sem sintomas ativos após 12 dias de acompanhamento.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
