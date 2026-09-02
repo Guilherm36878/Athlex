@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATHLEX</title>
+    
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <link rel="stylesheet" href="style2.css" />
+
+</head>
+<body>
+    <div class="login-container">
+  <div class="login-card">
+    <img src="imagens/Logo.png" alt="Athlex Logo" class="login-logo">
+
+    <h1>Bem-vindo ao Athlex</h1>
+    <p>Entre para acessar sua área esportiva inteligente.</p>
+
+    <form id="login-form">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="Digite seu email" required>
+
+      <label for="senha">Senha</label>
+      <input id="senha" name="senha" type="password" placeholder="Digite sua senha" required>
+
+      <p id="login-feedback" class="login-feedback" role="alert"></p>
+
+      <div class="profile-choice">
+        <button type="submit" class="login-btn enter">
+          Entrar 
+        </button>
+
+      </div>
+      
+    </form>
+  </div>
+</div>
+<script src="scripts/autenticacao/auth.js" defer></script>
+</body>
+</html>
