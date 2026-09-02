@@ -1,0 +1,528 @@
+
+---
+
+# `documentacao/planejamento-desenvolvimento.md`
+
+```md
+# Planejamento de Desenvolvimento ATHLEX
+
+Versão: 1.0
+
+## 1. Visão do produto
+
+A ATHLEX será uma plataforma esportiva com três perfis integrados:
+
+- atleta;
+- técnico;
+- gestor.
+
+Não serão três aplicativos independentes. Será um único sistema, no qual a conta, os vínculos e as permissões determinarão quais ambientes o usuário poderá acessar.
+
+Um usuário poderá possuir mais de um perfil, como gestor e técnico, mas deverá alternar entre as funções para evitar a mistura de permissões.
+
+## 2. Objetivo inicial
+
+Construir uma primeira versão funcional que permita:
+
+1. entrar na plataforma;
+2. selecionar ou identificar o perfil;
+3. acessar um ambiente adequado ao perfil;
+4. visualizar as informações principais;
+5. navegar entre os módulos fundamentais.
+
+## 3. MVP
+
+O MVP não incluirá todas as funcionalidades previstas.
+
+A primeira versão deverá validar:
+
+- estrutura de acesso;
+- hierarquia entre os perfis;
+- experiência do atleta;
+- experiência básica do técnico;
+- organização institucional básica;
+- integração futura com banco de dados.
+
+## 4. Escopo do MVP
+
+### 4.1 Acesso e autenticação
+
+- página inicial;
+- página explorar;
+- login;
+- seleção de acesso;
+- cadastro de atleta;
+- cadastro de técnico;
+- cadastro de gestor;
+- recuperação de senha;
+- boas-vindas conforme o perfil;
+- saída da conta.
+
+### 4.2 Atleta
+
+- dashboard;
+- perfil;
+- agenda de treinos;
+- treino do dia;
+- questionário de bem-estar;
+- registro de PSE/RPE;
+- disponibilidade;
+- calendário de jogos;
+- histórico simplificado.
+
+### 4.3 Técnico
+
+- dashboard;
+- lista de atletas;
+- visualização de disponibilidade;
+- alertas de bem-estar;
+- criação básica de treino;
+- agenda semanal;
+- registro de presença;
+- visualização da PSE/RPE.
+
+### 4.4 Gestor
+
+- dashboard institucional básico;
+- lista de equipes;
+- lista de técnicos;
+- lista de atletas;
+- criação de equipe;
+- vínculo entre usuários e equipes;
+- ativação e desativação visual de usuários.
+
+## 5. Fora do MVP
+
+As seguintes funcionalidades não serão prioridade nas primeiras sprints:
+
+- análise avançada de vídeo;
+- scout completo;
+- inteligência artificial;
+- módulo financeiro;
+- contratos;
+- patrocínios;
+- inventário;
+- comparação avançada entre equipes;
+- relatórios para patrocinadores;
+- análise biomecânica;
+- integrações com dispositivos;
+- notificações push;
+- chat em tempo real;
+- pagamentos;
+- aplicativo publicado nas lojas.
+
+Essas funcionalidades continuarão no Product Backlog.
+
+## 6. Requisitos funcionais
+
+### RF-001 — Cadastro
+
+O sistema deverá permitir o cadastro de atletas, técnicos e gestores.
+
+### RF-002 — Login
+
+O sistema deverá permitir que usuários cadastrados entrem na plataforma.
+
+### RF-003 — Identificação de perfil
+
+O sistema deverá direcionar o usuário para o ambiente correspondente ao seu perfil.
+
+### RF-004 — Perfis acumuláveis
+
+O sistema deverá permitir que um usuário possua mais de um perfil e alterne entre eles.
+
+### RF-005 — Perfil do atleta
+
+O atleta deverá visualizar e atualizar os dados pessoais permitidos.
+
+### RF-006 — Monitoramento diário
+
+O atleta deverá registrar bem-estar, sono, fadiga, dor, humor e disposição.
+
+### RF-007 — PSE/RPE
+
+O atleta deverá registrar a percepção de esforço de uma sessão.
+
+### RF-008 — Treinos do atleta
+
+O atleta deverá consultar seus próximos treinos e o histórico de sessões.
+
+### RF-009 — Jogos do atleta
+
+O atleta deverá consultar jogos, convocações, horários e resultados.
+
+### RF-010 — Gestão de atletas
+
+O técnico deverá consultar os atletas vinculados às suas equipes.
+
+### RF-011 — Planejamento de treinos
+
+O técnico deverá criar, editar e consultar sessões de treinamento.
+
+### RF-012 — Presença
+
+O técnico deverá registrar a presença dos atletas.
+
+### RF-013 — Acompanhamento
+
+O técnico deverá consultar respostas de bem-estar, PSE/RPE e disponibilidade.
+
+### RF-014 — Gestão de equipes
+
+O gestor deverá criar e administrar equipes e categorias.
+
+### RF-015 — Gestão de usuários
+
+O gestor deverá cadastrar, convidar, vincular, ativar e desativar usuários.
+
+### RF-016 — Controle de permissões
+
+O sistema deverá restringir os dados e as ações de acordo com o perfil e os vínculos.
+
+### RF-017 — Histórico de alterações
+
+Alterações em dados validados deverão registrar valor anterior, valor novo, autor e data.
+
+### RF-018 — Arquivamento
+
+Registros esportivos relevantes não deverão ser apagados diretamente. Eles deverão ser arquivados ou desativados.
+
+### RF-019 — Solicitação de correção
+
+O atleta deverá poder solicitar a correção de um dado oficial sem alterá-lo diretamente.
+
+### RF-020 — Portabilidade do atleta
+
+O histórico pessoal do atleta deverá permanecer disponível quando ele mudar de equipe.
+
+## 7. Requisitos não funcionais
+
+### RNF-001 — Responsividade
+
+A interface deverá funcionar em computadores, tablets e celulares.
+
+### RNF-002 — Usabilidade
+
+As ações principais deverão ser encontradas rapidamente, especialmente no ambiente do atleta.
+
+### RNF-003 — Consistência visual
+
+Botões, campos, cards, cores e espaçamentos deverão seguir o Design System ATHLEX.
+
+### RNF-004 — Acessibilidade
+
+A interface deverá possuir contraste adequado, textos legíveis, foco visível e navegação compreensível.
+
+### RNF-005 — Segurança
+
+Senhas não deverão ser armazenadas diretamente e o acesso deverá ser autenticado.
+
+### RNF-006 — Privacidade
+
+Dados pessoais e informações de saúde deverão possuir acesso restrito.
+
+### RNF-007 — LGPD
+
+A coleta e a utilização de dados deverão considerar consentimento, transparência e finalidade.
+
+### RNF-008 — Desempenho
+
+As páginas principais deverão carregar rapidamente em conexões móveis comuns.
+
+### RNF-009 — Compatibilidade
+
+O front-end deverá funcionar nas versões atuais dos principais navegadores.
+
+### RNF-010 — Manutenibilidade
+
+O código deverá ser organizado em pastas, componentes e arquivos com responsabilidades claras.
+
+### RNF-011 — Auditabilidade
+
+Alterações em dados oficiais deverão manter histórico.
+
+### RNF-012 — Escalabilidade
+
+A arquitetura deverá permitir a inclusão futura de novas modalidades esportivas.
+
+## 8. Perfis e permissões
+
+### Atleta
+
+Pode:
+
+- editar dados pessoais permitidos;
+- responder questionários;
+- registrar PSE/RPE;
+- informar disponibilidade;
+- consultar treinos, jogos e desempenho.
+
+Não pode:
+
+- alterar estatísticas oficiais;
+- alterar presença validada;
+- editar planejamento;
+- alterar avaliações técnicas;
+- apagar históricos validados.
+
+### Técnico
+
+Pode:
+
+- gerenciar atletas vinculados;
+- planejar treinos;
+- registrar presença;
+- criar convocações;
+- registrar estatísticas;
+- criar avaliações;
+- consultar monitoramento esportivo.
+
+Não pode:
+
+- administrar toda a instituição;
+- alterar contratos e finanças sem autorização;
+- acessar equipes sem vínculo;
+- alterar respostas originais do atleta;
+- apagar históricos sem registro.
+
+### Gestor
+
+Pode:
+
+- criar equipes e categorias;
+- administrar usuários;
+- estabelecer vínculos;
+- controlar permissões;
+- administrar calendários e estruturas;
+- visualizar indicadores institucionais.
+
+Não deve:
+
+- alterar respostas pessoais do atleta;
+- editar PSE/RPE declarado;
+- modificar avaliações técnicas sem permissão;
+- acessar indiscriminadamente dados clínicos.
+
+## 9. Épicos do produto
+
+### EP-01 — Fundação e navegação
+
+- organização do projeto;
+- componentes básicos;
+- rotas;
+- páginas institucionais;
+- responsividade.
+
+### EP-02 — Autenticação e acesso
+
+- cadastro;
+- login;
+- recuperação de senha;
+- perfil;
+- seleção ou identificação de função.
+
+### EP-03 — Experiência do atleta
+
+- dashboard;
+- perfil;
+- treinos;
+- bem-estar;
+- PSE/RPE;
+- jogos;
+- histórico.
+
+### EP-04 — Experiência do técnico
+
+- dashboard;
+- atletas;
+- planejamento;
+- presença;
+- monitoramento;
+- jogos.
+
+### EP-05 — Experiência do gestor
+
+- dashboard;
+- equipes;
+- usuários;
+- vínculos;
+- categorias;
+- permissões.
+
+### EP-06 — Integração
+
+- API;
+- banco;
+- autenticação;
+- estados de carregamento;
+- tratamento de erros.
+
+### EP-07 — Desempenho e relatórios
+
+- gráficos;
+- indicadores;
+- estatísticas;
+- relatórios.
+
+### EP-08 — Recursos avançados
+
+- análise de vídeo;
+- scout;
+- IA;
+- módulo financeiro;
+- integrações externas.
+
+## 10. Priorização
+
+### Prioridade P0 — Essencial
+
+Sem esses itens não existe uma primeira versão utilizável:
+
+- navegação;
+- login;
+- cadastro;
+- identificação do perfil;
+- dashboard-base;
+- perfil do atleta;
+- treino do dia;
+- bem-estar;
+- PSE/RPE;
+- lista de atletas do técnico;
+- estrutura básica de equipes.
+
+### Prioridade P1 — Importante
+
+- agenda semanal;
+- presença;
+- disponibilidade;
+- jogos;
+- alertas;
+- edição de perfil;
+- vínculo entre atletas e equipes;
+- estados de carregamento e erro.
+
+### Prioridade P2 — Evolução
+
+- gráficos;
+- relatórios;
+- testes físicos;
+- estatísticas detalhadas;
+- convocações;
+- notificações internas.
+
+### Prioridade P3 — Futuro
+
+- análise de vídeo;
+- scout avançado;
+- IA;
+- financeiro;
+- chat;
+- dispositivos;
+- pagamentos.
+
+## 11. Responsabilidades
+
+### Guilherme — Front-end
+
+Responsável por:
+
+- estrutura HTML;
+- CSS;
+- JavaScript da interface;
+- componentes visuais;
+- responsividade;
+- navegação;
+- formulários;
+- validações visuais;
+- dashboards;
+- gráficos;
+- estados vazios;
+- estados de carregamento;
+- estados de erro;
+- integração com endpoints fornecidos pelo back-end.
+
+Não será responsável inicialmente por:
+
+- banco de dados;
+- autenticação real;
+- regras de autorização no servidor;
+- criptografia;
+- infraestrutura;
+- deploy do back-end.
+
+### Desenvolvedor de back-end
+
+Responsável por:
+
+- banco de dados;
+- autenticação;
+- autorização;
+- API;
+- histórico de alterações;
+- regras de negócio;
+- segurança;
+- armazenamento;
+- consentimentos;
+- endpoints;
+- documentação da API.
+
+### Marcílio — Product Owner
+
+Responsável por:
+
+- prioridade do backlog;
+- validação esportiva;
+- esclarecimento das regras;
+- aceite das entregas;
+- definição do que entra nas versões.
+
+## 12. Fluxo de trabalho
+
+Cada tarefa deverá passar por:
+
+1. Backlog;
+2. Pronta para desenvolvimento;
+3. Em desenvolvimento;
+4. Em revisão;
+5. Em teste;
+6. Concluída.
+
+Não deverá haver muitas tarefas simultâneas.
+
+Cada desenvolvedor deverá manter, preferencialmente, apenas uma tarefa principal em desenvolvimento.
+
+## 13. Definition of Ready
+
+Uma tarefa está pronta para entrar na sprint quando possuir:
+
+- objetivo claro;
+- perfil de usuário;
+- descrição;
+- referência visual quando necessária;
+- critérios de aceitação;
+- dependências conhecidas;
+- responsável definido.
+
+## 14. Definition of Done
+
+Uma tarefa de front-end está concluída quando:
+
+- a tela está implementada;
+- os links funcionam;
+- não existem caminhos quebrados;
+- a tela funciona em desktop e celular;
+- os componentes existentes foram reutilizados;
+- não há CSS desnecessariamente duplicado;
+- os estados principais foram representados;
+- o Product Owner validou a interface;
+- o código foi versionado.
+
+## 15. Organização das sprints
+
+Duração recomendada:
+
+- 1 semana durante a fase inicial;
+- revisão ao final da semana;
+- planejamento da próxima sprint após a revisão.
+
+Cada sprint deverá possuir um objetivo único e claro.

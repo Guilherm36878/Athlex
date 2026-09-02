@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATHLEX</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="../../recursos/icones/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../recursos/icones/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../recursos/icones/favicon-16x16.png">
+
+<link rel="stylesheet" href="../../estilos/base/reset.css">
+<link rel="stylesheet" href="../../estilos/base/variaveis.css">
+<link rel="stylesheet" href="../../estilos/base/global.css">
+
+<link rel="stylesheet" href="../../estilos/componentes/logo.css">
+<link rel="stylesheet" href="../../estilos/componentes/formularios.css">
+<link rel="stylesheet" href="../../estilos/componentes/botoes.css">
+<link rel="stylesheet" href="../../estilos/componentes/cards-perfil.css">
+
+<link rel="stylesheet" href="../../estilos/paginas/login.css">
+
+</head>
+<body>
+
+  <div class="login-container">
+
+    <div class="login-card">
+
+      <img
+        src="../../recursos/logos/Logo.png"
+        alt="Logo da Athlex"
+        class="login-logo"
+      >
+
+      <h1>Bem-vindo ao Athlex</h1>
+
+      <p>
+        Escolha como deseja acessar sua área esportiva inteligente.
+      </p>
+
+      <input
+        type="radio"
+        name="login-flow"
+        id="opcao-login"
+        hidden
+      >
+
+      <input
+        type="radio"
+        name="login-flow"
+        id="opcao-cadastro"
+        hidden
+      >
+
+      <div class="initial-options">
+
+        <label
+          for="opcao-login"
+          class="login-btn enter"
+        >
+          Já tenho conta
+        </label>
+
+        <label
+          for="opcao-cadastro"
+          class="login-btn outline"
+        >
+          Criar novo acesso
+        </label>
+
+      </div>
+
+      <form id="login-form" class="login-form">
+
+        <label for="email">Email</label>
+
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Digite seu email"
+          required
+        >
+
+        <label for="senha">Senha</label>
+
+        <input
+          id="senha"
+          name="senha"
+          type="password"
+          placeholder="Digite sua senha"
+          required
+        >
+
+        <p id="login-feedback" class="login-feedback" role="alert"></p>
+
+        <div class="profile-choice">
+
+          <button
+            type="submit"
+            class="login-btn enter"
+          >
+            Entrar
+          </button>
+
+        </div>
+
+        <label
+          for="opcao-cadastro"
+          class="back-link"
+        >
+          Criar uma nova conta
+        </label>
+
+      </form>
+
+      <div class="register-options">
+
+        <a
+          href="../cadastros/cadastro-dirigente.html"
+          class="profile-card"
+        >
+          <strong>Dirigente</strong>
+        </a>
+
+        <a
+          href="../cadastros/cadastro-treinador.html"
+          class="profile-card"
+        >
+          <strong>Treinador</strong>
+        </a>
+
+        <a
+          href="../cadastros/cadastro-atleta.html"
+          class="profile-card"
+        >
+          <strong>Atleta</strong>
+        </a>
+
+        <label
+          for="opcao-login"
+          class="back-link"
+        >
+          Já tenho conta
+        </label>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="/scripts/autenticacao/auth.js" defer></script>
+</body>
+</html>

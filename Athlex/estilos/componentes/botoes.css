@@ -1,0 +1,82 @@
+.login-btn {
+  text-decoration: none;
+  color: #24ff73;
+  border: 1px solid #18d860;
+  border-radius: 999px;
+  padding: 16px 34px;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #18d860;
+  color: #021008;
+}
+
+.buttons {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 42px;
+}
+
+.primary-btn,
+.secondary-btn {
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 20px 34px;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #8dff4b, #00bd55);
+  color: #031008;
+  box-shadow: 0 0 32px rgba(0, 255, 80, 0.34);
+}
+
+.secondary-btn {
+  color: white;
+  border: 1px solid rgba(190, 220, 230, 0.22);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 640px) {
+  .login-btn {
+    display: none;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    text-align: center;
+  }
+}
+
+.cadastro-btn {
+  text-decoration: none;
+  text-align: center;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cadastro-btn.primary {
+  background: #00ff78;
+  color: #031006;
+}
+
+.cadastro-btn.secondary {
+  background: transparent;
+  color: #00ff78;
+  border: 1px solid #00ff78;
+}
+
+.cadastro-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(0, 255, 120, 0.35);
+}
